@@ -6,7 +6,7 @@
     {
       "id": "hunted-archelaus",
       "name": "Archelaus",
-      "level": null,
+      "level": 50,
       "vocation": "Royal Paladin",
       "group": "main",
       "notes": ""
@@ -14,7 +14,7 @@
     {
       "id": "hunted-biig",
       "name": "Biig",
-      "level": null,
+      "level": 29,
       "vocation": "Master Sorcerer",
       "group": "main",
       "notes": ""
@@ -46,7 +46,7 @@
     {
       "id": "hunted-napoleon",
       "name": "Napoleon",
-      "level": null,
+      "level": 28,
       "vocation": "Master Sorcerer",
       "group": "main",
       "notes": ""
@@ -54,7 +54,7 @@
     {
       "id": "hunted-rzgy",
       "name": "Rzgy",
-      "level": null,
+      "level": 39,
       "vocation": "Royal Paladin",
       "group": "main",
       "notes": ""
@@ -62,7 +62,7 @@
     {
       "id": "hunted-saladino",
       "name": "Saladino",
-      "level": null,
+      "level": 34,
       "vocation": "Royal Paladin",
       "group": "main",
       "notes": ""
@@ -70,7 +70,7 @@
     {
       "id": "hunted-afavor-doscorres",
       "name": "Afavor Doscorres",
-      "level": null,
+      "level": 29,
       "vocation": "Master Sorcerer",
       "group": "main",
       "notes": ""
@@ -86,7 +86,7 @@
     {
       "id": "main-help-package",
       "name": "Help Package",
-      "level": null,
+      "level": 31,
       "vocation": "Royal Paladin",
       "group": "main",
       "notes": ""
@@ -103,14 +103,14 @@
       "id": "main-khardix",
       "name": "Khardix",
       "level": 32,
-      "vocation": "",
+      "vocation": "Master Sorcerer",
       "group": "main",
       "notes": ""
     },
     {
       "id": "main-manito-xilote",
       "name": "Manito Xilote",
-      "level": null,
+      "level": 24,
       "vocation": "Royal Paladin",
       "group": "main",
       "notes": ""
@@ -142,7 +142,7 @@
     {
       "id": "main-sty-ling",
       "name": "Sty Ling",
-      "level": null,
+      "level": 28,
       "vocation": "Elder Druid",
       "group": "main",
       "notes": ""
@@ -158,7 +158,7 @@
     {
       "id": "team-garotao",
       "name": "Garotao",
-      "level": null,
+      "level": 32,
       "vocation": "Royal Paladin",
       "group": "team",
       "notes": ""
@@ -166,7 +166,7 @@
     {
       "id": "team-noob-killer",
       "name": "Noob Killer",
-      "level": null,
+      "level": 22,
       "vocation": "Royal Paladin",
       "group": "team",
       "notes": ""
