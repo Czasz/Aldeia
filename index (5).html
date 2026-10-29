@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101216">
+  <meta name="description" content="A lista da guild em um só lugar. Consulte Hunted e Nosso time, pesquise personagens e filtre por família de vocação.">
+  <title>Aldeia Intel · Central da guild</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='%23d5b46f' d='M32 4 56 14v20c0 13-17 24-24 28C25 58 8 47 8 34V14Zm0 7-18 7v16c0 9 11 18 18 23V11Z'/%3E%3C/svg%3E">
+  <style>:root{color-scheme:dark;--bg:#101216;--panel:#181b21;--panel-deep:#14171c;--line:#2a2e36;--text:#f2f3f5;--muted:#9ca5b5;--gold:#d7b572;--gold-bright:#e6c78c;--main:#ed7e7e;--team:#78c6aa;--radius:12px;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-size:14px;line-height:1.5}button,input,select,textarea{font:inherit}button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}button,a{touch-action:manipulation}a{color:inherit;text-decoration:none}button{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:3px}input,select,textarea{color:var(--text);background:#12151a;border:1px solid #363c47;border-radius:7px}select{padding:10px 32px 10px 12px;max-width:100%}input::placeholder,textarea::placeholder{color:#8791a2}svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0)}.skip-link{position:fixed;top:-80px;left:20px;padding:12px 20px;z-index:100;background:var(--gold);color:#111}.skip-link:focus{top:12px}
+.sidebar{position:fixed;inset:0 auto 0 0;width:236px;background:#13161b;border-right:1px solid var(--line);padding:29px 16px;display:flex;flex-direction:column;z-index:30}.brand{display:flex;align-items:center;gap:12px;padding:0 8px 40px}.brand-mark{color:var(--gold);display:flex}.brand-mark svg{height:38px;width:32px}.brand strong{font-size:18px;letter-spacing:.8px;white-space:nowrap;font-weight:750}.brand b{font-weight:500;color:var(--gold)}.brand small{display:block;font-size:9px;letter-spacing:1.8px;color:#8791a1;margin-top:3px}.nav-label{font-size:10px;color:#7f8898;font-weight:650;letter-spacing:1.55px;padding:0 13px;margin-bottom:14px}.nav-item{position:relative;display:flex;align-items:center;gap:12px;width:100%;border:0;background:transparent;text-align:left;padding:13px 12px;border-radius:7px;margin-bottom:5px;color:#a8b0bf;font-weight:530;font-size:13px;min-height:46px}.nav-item svg{width:19px;height:19px}.nav-item:hover{background:#20242b;color:var(--text)}.nav-item.active{background:#2d291f;color:var(--gold-bright)}.nav-item.active:before{content:"";position:absolute;left:0;top:11px;bottom:11px;width:2px;background:var(--gold);border-radius:3px}.nav-count{margin-left:auto;font-size:11px;font-weight:500;color:#8993a3;font-variant-numeric:tabular-nums}.active .nav-count{color:var(--gold)}.sidebar-divider{height:1px;background:var(--line);margin:24px 10px 20px}.sidebar-bottom{margin-top:auto;border-top:1px solid var(--line);padding:23px 8px 0;display:flex;gap:10px;align-items:center}.world-dot{width:7px;height:7px;background:var(--gold);border-radius:50%}.sidebar-bottom strong{font-size:12px;font-weight:550}.sidebar-bottom small{display:block;color:#7f8999;font-size:10px;margin-top:3px}.version-label{margin-left:auto;font-size:10px;color:#657080}.workspace{margin-left:236px}.topbar{height:70px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 36px;background:#111419}.breadcrumb,.topbar-right{display:flex;align-items:center;gap:14px}.breadcrumb{font-size:11px;color:#9aa4b4}.breadcrumb span:last-child{color:#c5ccd7}.tiny-shield{font-size:22px;color:var(--gold)}.slash{color:#515b69!important}.manual-pill{display:flex;align-items:center;gap:7px;color:#a4aebe;font-size:10px;letter-spacing:.2px}.manual-pill span{width:5px;height:5px;border-radius:50%;background:#8995a8}.user-avatar{background:#292c34;border:1px solid #454b58;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:11px;margin-left:10px}main{max-width:1680px;margin:auto;padding:35px 36px 0}.page-heading{display:flex;gap:24px;align-items:center;justify-content:space-between;margin-bottom:29px}.eyebrow{font-size:10px;font-weight:650;letter-spacing:1.55px;color:var(--gold);margin-bottom:8px}h1{font-size:30px;line-height:1.22;font-weight:650;letter-spacing:-1.1px;margin:0}h2{font-size:17px;letter-spacing:-.35px;font-weight:620;margin:0}h3{margin:0;font-size:14px}.page-heading p{color:var(--muted);font-size:12px;margin:9px 0 0}.heading-actions{display:flex;gap:9px;flex-shrink:0}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border-radius:7px;border:1px solid transparent;font-size:12px;font-weight:600;padding:11px 15px;min-height:41px;white-space:nowrap;transition:background .15s,transform .15s}.btn:active{transform:translateY(1px)}.btn svg{width:16px;height:16px}.btn-primary{background:var(--gold);color:#18150f;border-color:var(--gold)}.btn-primary:hover{background:var(--gold-bright)}.btn-secondary{background:#181b21;border-color:#3b424e;color:#d8dde5}.btn-secondary:hover{background:#232832;border-color:#5b6575}.btn-small{font-size:11px;padding:8px 11px;min-height:34px}.btn-danger{background:#3c2328;color:#ffaaaa;border-color:#734149}.btn-danger:hover{background:#542b34}.stats-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:26px}.stat-card{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(120deg,#1a1e25,#171a20);padding:20px;position:relative;display:flex;align-items:center;gap:16px;min-height:102px;text-align:left;transition:border-color .2s,background .2s}.stat-card:hover{border-color:#515865;background:#1e232b}.stat-card.active{border-color:#8a754c}.stat-icon{width:39px;height:39px;border-radius:9px;display:grid;place-items:center;background:#2f2328;color:var(--main);flex-shrink:0}.stat-icon svg{width:21px;height:21px}.stat-card[data-tone=team] .stat-icon{background:#20342e;color:var(--team)}.stat-value{font-size:26px;font-weight:650;letter-spacing:-.7px;line-height:1.15;font-variant-numeric:tabular-nums}.stat-label{font-size:12px;color:#b2bbc8;margin-bottom:6px}.stat-note{font-size:10px;color:#7e8999;margin-top:3px}.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:22px;align-items:start}.panel{border:1px solid var(--line);background:var(--panel);border-radius:var(--radius);overflow:hidden}.list-header{padding:24px 22px 19px;display:flex;align-items:center;justify-content:space-between;gap:12px}.section-eyebrow{font-size:8px;letter-spacing:1.65px;color:#7f899a;margin-bottom:7px;font-weight:650}.list-header p{font-size:11px;color:var(--muted);margin:6px 0 0}.list-actions{display:flex;gap:6px}.filters{display:flex;gap:8px;margin:0 22px 18px}.filters select{font-size:11px;max-width:170px;min-width:0;min-height:39px;padding-right:20px}.search-field{display:flex;align-items:center;position:relative;flex:1;min-width:140px}.search-field svg{position:absolute;left:11px;width:15px;height:15px;color:#919cad;pointer-events:none}.search-field input{width:100%;padding:10px 30px 10px 34px;font-size:11px;height:39px}.search-field kbd{font:10px inherit;position:absolute;right:10px;padding:0 4px;border:1px solid #3b414c;border-radius:3px;color:#737f92;pointer-events:none}input[type=search]::-webkit-search-cancel-button{cursor:pointer}.table-scroll{overflow-x:auto;padding:0 12px}table{border-collapse:collapse;width:100%;white-space:nowrap}th{background:#1d2129;font-size:10px;color:#919dad;font-weight:550;text-align:left;padding:12px 10px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}th:first-child{border-radius:5px 0 0 5px;padding-left:12px}th:last-child{border-radius:0 5px 5px 0}.level-column{text-align:right;width:60px}.actions-column{width:40px}td{padding:13px 10px;border-bottom:1px solid #272c34;font-size:11px;color:#b5bdcb;vertical-align:middle}td:first-child{padding-left:12px}td:nth-child(2){text-align:right;font-variant-numeric:tabular-nums;font-size:12px;font-weight:550;color:#e2e6ec}tbody tr:hover{background:#20252d}tbody tr:last-child td{border-bottom:0}.row-name{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:550;color:#e8ebf0;border:0;background:none;padding:0;text-align:left}.row-name:hover{color:var(--gold-bright)}.row-icon{height:28px;width:28px;display:grid;place-items:center;border-radius:6px;background:#262b34;color:#a5b1c3;flex-shrink:0}.row-icon svg{width:15px;height:15px}.group-badge{display:inline-flex;padding:3px 7px;border-radius:4px;font-size:9px;font-weight:550;background:#33262b;color:var(--main);white-space:nowrap}.group-badge[data-tone=team]{background:#21362e;color:var(--team)}.row-actions{display:flex;justify-content:flex-end;gap:3px}.icon-btn{border:1px solid transparent;border-radius:6px;background:transparent;color:#98a4b6;display:inline-grid;place-items:center;padding:7px;min-width:32px;min-height:32px}.icon-btn svg{width:17px;height:17px}.icon-btn:hover{color:#edf0f6;background:#2e3440}.table-footer{padding:17px 22px;border-top:1px solid var(--line);color:#8994a5;font-size:10px;display:flex;justify-content:space-between;gap:10px}.table-footer>span:last-child{display:flex;align-items:center;gap:6px;font-size:9px}.subtle-dot{height:4px;width:4px;background:#6b7688;border-radius:50%}.right-rail{display:flex;flex-direction:column;gap:18px}.rail-heading{display:flex;align-items:center;gap:8px;padding:20px 20px 0}.rail-heading h2{font-size:14px;letter-spacing:-.1px}.rail-icon{display:flex}.rail-icon svg{height:18px;width:18px}.team-tone{color:var(--team)}.rail-eyebrow{font-size:7px;letter-spacing:1.2px;color:#679c89;margin-left:auto}.team-card{padding:19px 20px;display:flex;align-items:center;gap:12px}.team-avatar{background:#22372f;border:1px solid #3b5a4f;color:var(--team);border-radius:9px;width:40px;height:44px;display:grid;place-items:center;font-size:18px;flex-shrink:0}.team-avatar svg{width:20px}.team-meta{min-width:0}.team-meta strong,.team-meta .team-name{display:block;font-size:16px;font-weight:650;letter-spacing:-.4px;color:#ecf2f0}.team-meta small,.team-meta p{font-size:10px;color:#9ba99f;margin:4px 0 0;display:block}.team-level{margin-left:auto;text-align:right;font-size:22px;line-height:1.1;font-weight:650;letter-spacing:-.6px}.team-level small{display:block;font-size:8px;letter-spacing:0;color:#8999a0;font-weight:400;margin-top:5px}.team-card+.team-card{padding-top:6px}.text-action{background:none;border:0;border-top:1px solid var(--line);width:100%;text-align:left;display:flex;justify-content:space-between;padding:13px 20px;color:#a9b6c5;font-size:10px}.text-action:hover{background:#20262c;color:var(--team)}.rail-caption{margin:5px 20px 17px;color:#8591a1;font-size:10px}#vocation-summary{padding:0 20px 21px}.vocation-row{margin-bottom:15px;font-size:10px;color:#afbacb}.vocation-row:last-child{margin-bottom:0}.vocation-row>div:first-child{display:flex;justify-content:space-between;gap:8px;margin-bottom:7px}.vocation-bar{height:4px;background:#292f39;border-radius:6px;overflow:hidden}.vocation-bar>span,.vocation-bar>div{display:block;background:var(--gold);height:100%;border-radius:6px}.note-panel{display:flex;gap:12px;padding:16px 5px;color:#95a0b1}.note-icon{color:#7f8c9f;padding-top:1px}.note-icon svg{width:21px;height:21px}.note-panel h3{font-size:11px;font-weight:550;color:#c0c8d4;margin-bottom:5px}.note-panel p{font-size:10px;line-height:1.8;margin:0;color:#8591a2}.page-footer{display:flex;align-items:center;justify-content:space-between;font-size:9px;color:#697688;padding:25px 0 23px;letter-spacing:.2px}.footer-separator{padding:0 8px;color:#485361}.empty-state{text-align:center;padding:60px 25px}.empty-symbol{font-size:35px;color:#6f7f96}.empty-state h3{font-size:15px;margin:8px 0}.empty-state p{color:var(--muted);font-size:12px;margin:8px 0 18px}.draft-indicator{font-size:11px;color:#d8bf8e;background:#272319;border:1px solid #51442c;border-radius:8px;padding:11px 15px;margin-bottom:22px;line-height:1.6}.draft-indicator button{border:0;background:none;color:var(--gold);text-decoration:underline;font-size:inherit}
+.drawer-backdrop{position:fixed;inset:0;background:#05070bb5;backdrop-filter:blur(3px);z-index:60}.drawer{position:fixed;inset:0 0 0 auto;width:min(560px,100%);height:100dvh;z-index:70;background:#191d24;border-left:1px solid #363d49;box-shadow:-20px 0 80px #0005;display:flex;flex-direction:column;overflow:hidden}.drawer-header{padding:29px 28px 24px;display:flex;align-items:flex-start;justify-content:space-between;gap:15px;border-bottom:1px solid #303640;flex-shrink:0}.drawer-header h2{font-size:23px;letter-spacing:-.6px}.drawer-header p{color:var(--muted);font-size:12px;margin:7px 0 0;line-height:1.6}.drawer-content{padding:25px 28px;overflow-y:auto;flex:1}.drawer-content form{display:flex;flex-direction:column;gap:20px}.field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}.field-label{display:block;font-size:12px;font-weight:550;color:#d6dde8}.form-input,.form-select,.form-textarea{width:100%;padding:12px 13px;font-size:13px;background:#13171d;border:1px solid #424b59;border-radius:7px}.form-textarea{min-height:100px;resize:vertical;line-height:1.65}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field-help{color:#8b98ac;font-size:11px;line-height:1.7;margin:0}.form-error{font-size:12px;color:#ffaaaa;line-height:1.6}.form-error:empty{display:none}.group-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.group-option{background:#1d222b;border:1px solid #3c4552;color:#cbd3df;border-radius:8px;padding:15px;display:flex;align-items:center;gap:9px;font-size:12px;cursor:pointer}.group-option:has(input:checked),.group-option.selected,.group-option.active{border-color:var(--gold);background:#2b281f;color:var(--gold-bright)}.group-option input{accent-color:var(--gold)}.group-option svg{width:19px}.drawer-footer{display:flex;gap:9px;align-items:center;justify-content:flex-end;border-top:1px solid #343c48;margin-top:24px;padding-top:20px}.drawer-footer .btn-danger{margin-right:auto}.notice{background:#212935;border:1px solid #354254;color:#b6c5d9;padding:13px 15px;border-radius:7px;font-size:11px;line-height:1.7;margin:15px 0}.notice-warning{background:#2d271d;border-color:#5c4c2d;color:#ddc593}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:10px 0 25px}.detail-label{display:block;font-size:10px;color:#8d9ab0;letter-spacing:.3px;margin-bottom:6px}.detail-value{display:block;font-size:16px;color:#e8edf4;overflow-wrap:anywhere}.detail-notes{font-size:13px;color:#c0cad8;line-height:1.8;white-space:pre-wrap}.bulk-summary{font-size:12px;line-height:1.7;margin:15px 0}.bulk-list{font-size:12px;line-height:1.8;color:#bdc8d8;max-height:240px;overflow:auto;padding-left:20px}.tool-card{border:1px solid #394250;background:#1d232c;padding:18px;border-radius:9px;margin-bottom:14px}.tool-card h3{font-size:14px;margin-bottom:8px}.tool-card p{font-size:12px;line-height:1.7;color:var(--muted);margin:8px 0 15px}.tool-card .btn{white-space:normal}.toast{position:fixed;bottom:25px;left:calc(50% + 118px);transform:translateX(-50%);max-width:min(90vw,520px);background:#28352f;color:#e3f3eb;border:1px solid #557465;border-radius:9px;padding:13px 20px;font-size:12px;box-shadow:0 10px 40px #0007;z-index:90;line-height:1.6}.toast.error{background:#40262a;color:#ffd7db;border-color:#7b424a}.mobile-only{display:none}
+@media(min-width:1600px){body{font-size:15px}main{padding-top:42px}.stat-card{min-height:112px}td{padding-top:15px;padding-bottom:15px;font-size:12px}.row-name{font-size:13px}.content-grid{grid-template-columns:minmax(0,1fr) 300px}.filters select,.search-field input{font-size:12px}}
+@media(max-width:1240px){.sidebar{width:208px;padding-left:12px;padding-right:12px}.brand{gap:8px}.brand strong{font-size:16px}.workspace{margin-left:208px}.topbar{padding:0 25px}main{padding-left:25px;padding-right:25px}.content-grid{grid-template-columns:minmax(0,1fr) 240px;gap:16px}.stat-card{padding:16px;gap:11px}.heading-actions .btn{padding:10px 12px;font-size:11px}h1{font-size:27px}.list-header{padding-left:17px;padding-right:17px}.filters{margin-left:17px;margin-right:17px;flex-wrap:wrap}.search-field{flex-basis:100%}.filters select{flex:1;max-width:none}.list-header{align-items:flex-start}.list-actions{flex-direction:column}.row-name{gap:7px}.row-icon{width:24px;height:26px}.toast{left:calc(50% + 104px)}}
+@media(max-width:1050px){.content-grid{grid-template-columns:minmax(0,1fr)}.right-rail{display:grid;grid-template-columns:1fr 1fr}.note-panel{display:none}.filters{flex-wrap:nowrap}.search-field{flex-basis:auto}.filters select{flex:initial;max-width:170px}.heading-actions{flex-direction:column;gap:6px}.list-actions{flex-direction:row}.stat-card{padding:16px 13px;gap:9px}.stat-icon{width:29px;height:32px}.stat-icon svg{width:17px}.stat-label{font-size:11px}.stat-value{font-size:24px}}
+@media(max-width:760px){.sidebar{transform:translateX(-100%);transition:transform .2s;width:236px;box-shadow:15px 0 50px #0006;top:58px;padding-top:22px}.sidebar.is-open{transform:translateX(0)}.brand{padding-bottom:24px}.workspace{margin-left:0}.topbar{height:58px;padding:0 16px;position:sticky;top:0;z-index:40}.mobile-only{display:inline-grid}.breadcrumb{gap:9px}.tiny-shield,.breadcrumb>.slash,.breadcrumb>span:last-child,.user-avatar{display:none}.manual-pill{font-size:9px}.topbar-right{gap:5px}main{padding:25px 16px 0}.page-heading{align-items:flex-start;gap:15px;margin-bottom:22px;flex-direction:column}.eyebrow{font-size:9px;letter-spacing:1.25px}h1{font-size:28px}.page-heading p{font-size:12px}.heading-actions{flex-direction:row;width:100%}.heading-actions .btn{font-size:12px;padding:10px 14px}.stats-grid{grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px}.stat-card{min-height:86px;padding:16px;gap:12px}.stat-icon{height:35px;width:35px}.stat-label{font-size:12px}.stat-value{font-size:24px}.content-grid{gap:16px}.list-header{padding:20px 16px 17px;flex-wrap:wrap}.list-header h2{font-size:17px}.filters{margin:0 16px 15px;flex-wrap:wrap;gap:7px}.search-field{flex-basis:100%}.filters select{max-width:none;flex:1;font-size:11px}.table-scroll{padding:0 8px}.table-footer{padding:14px 16px;font-size:10px;flex-wrap:wrap}.table-footer>span:last-child{font-size:9px}th{font-size:10px}td{font-size:11px;padding:12px 8px}.row-name{font-size:12px}td:nth-child(3){min-width:112px}th:first-child,td:first-child{padding-left:9px}.row-icon{display:none}.group-badge{font-size:9px}.right-rail{gap:12px}.rail-heading{padding:17px 16px 0}.rail-heading h2{font-size:13px}.rail-eyebrow{display:none}.team-card{padding:20px 16px;gap:9px}.team-avatar{display:none}.team-meta strong{font-size:15px}.team-level{font-size:20px}.team-meta small{font-size:9px}.text-action{padding:12px 16px}#vocation-summary{padding:0 16px 17px}.rail-caption{margin:5px 16px 15px;font-size:9px}.vocation-row{font-size:9px}.page-footer{font-size:8px;gap:12px;align-items:flex-start}.page-footer>span:last-child{text-align:right}.toast{left:50%;bottom:17px;width:max-content}.drawer-header{padding:22px 20px}.drawer-content{padding:22px 20px}.drawer-header h2{font-size:22px}.drawer-footer{flex-wrap:wrap}.draft-indicator{font-size:10px}.btn-small{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+.team-card{border:0;background:transparent;width:100%;text-align:left;color:var(--text)}.team-card:hover{background:#1e2926}.team-level strong{font-weight:650}.form-fieldset{border:0;padding:0;min-width:0}.form-fieldset legend{padding:0;margin-bottom:12px}.notice{display:flex;gap:10px;align-items:flex-start}.notice svg{width:17px;height:17px;margin-top:1px}.notice p{margin:0}.text-btn{display:inline-flex;gap:7px;align-items:center;color:var(--gold);font-size:12px;background:transparent;border:0;padding:5px 0;text-align:left}.text-btn:hover{text-decoration:underline}.text-btn svg{width:14px;height:14px}.full-width{width:calc(100% - 40px);margin:0 20px 16px;white-space:normal}.character-hero{display:flex;gap:22px;align-items:center;padding:20px 0 32px}.character-avatar{display:grid;place-items:center;width:72px;height:72px;background:#292f39;border:1px solid #414b5a;border-radius:15px;color:var(--gold)}.character-avatar svg{width:32px;height:32px}.character-level{font-size:39px;line-height:1.1;letter-spacing:-1px}.form-section-label{font-size:11px;color:#94a2b7;padding:14px 0 0;border-top:1px solid #343d4b}.bulk-summary strong{color:#e5c78f;font-size:20px}.import-counts{display:flex;gap:14px;flex-wrap:wrap}.row-subtitle{display:block;font-size:9px;color:#8d9ab0;font-weight:400;margin-top:3px}.linked-list{display:flex;flex-direction:column;align-items:flex-start}.muted{color:var(--muted)}.empty-copy{font-size:11px;line-height:1.7;padding:0 20px 10px}.drawer-open{overflow:hidden}.toast[data-error=true]{background:#40262a;color:#ffd7db;border-color:#7b424a}.drawer-content form>.field{margin-bottom:0}.drawer-content form>.notice{margin:0}.drawer-content form>.drawer-footer{margin-top:0}.drawer-content form>.form-grid .field{margin-bottom:0}
+.drawer-copy,.confirm-copy{font-size:13px;line-height:1.8;color:#b8c4d5}.export-illustration{height:64px;width:64px;display:grid;place-items:center;color:var(--gold);background:#302a1f;border:1px solid #51462d;border-radius:13px;margin-bottom:23px}.export-illustration svg{width:29px;height:29px}.stat-text{min-width:0}.vocation-cell{font-size:11px}.form-fieldset .field-label{margin-bottom:12px}
+
+.filter-meta{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:-6px 22px 16px;min-height:24px}.filter-meta p{margin:0;color:var(--muted);font-size:10px;line-height:1.5}.filter-meta .text-btn{font-size:10px;white-space:nowrap;min-height:28px}.table-scroll:focus-visible{outline:2px solid var(--gold);outline-offset:-2px;border-radius:6px}.stat-card .stat-text{flex:1}.stat-card[data-tone=main].active{border-color:#865454}.stat-card[data-tone=team].active{border-color:#4c806d}@media(max-width:1240px){.filter-meta{margin-left:17px;margin-right:17px}}@media(max-width:760px){.filter-meta{margin-left:16px;margin-right:16px;align-items:flex-start}.filter-meta p{max-width:220px}.stat-card{gap:10px;padding:15px 12px}}
+
+.load-message{margin:0 0 18px;padding:0;color:var(--muted);font-size:11px;line-height:1.6}.load-error{padding:18px 20px;margin-bottom:22px;border:1px solid #80484d;border-radius:10px;background:#2c2025;color:#ffd2d4;font-size:13px;line-height:1.6}.load-error p{margin:0 0 12px}.load-error button{color:var(--text)}#refresh-btn:disabled{opacity:.6;cursor:wait}
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Ir para a lista</a>
+  <aside id="sidebar" class="sidebar" aria-label="Navegação principal">
+    <a class="brand" href="#" aria-label="Aldeia Intel, início">
+      <span class="brand-mark"><svg width="36" height="42" viewBox="0 0 36 42" fill="none" aria-hidden="true"><path d="M18 3 32 8v13c0 8-9 14-14 18C13 35 4 29 4 21V8L18 3Z" stroke="currentColor" stroke-width="2.5"/><path d="M18 9 26 12v9c0 4-4 8-8 12V9Z" fill="currentColor"/></svg></span>
+      <span><strong>ALDEIA <b>INTEL</b></strong><small>CENTRAL DA GUILD</small></span>
+    </a>
+    <div class="nav-label">ORGANIZAÇÃO</div>
+    <nav id="nav-list">
+      <button class="nav-item" data-group="all"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Visão geral</span><span class="nav-count">—</span></button>
+      <button class="nav-item active" data-group="main"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 5 2 11 11-4 4L5 9 4 3ZM15 4l5-1-1 6-5 5M3 17l4 4m-2-2 4-4m6 0 6 6"/></svg><span>Hunted</span><span class="nav-count">—</span></button>
+      <button class="nav-item" data-group="team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 3v6c0 5-5 8-8 10-3-2-8-5-8-10V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg><span>Nosso time</span><span class="nav-count">—</span></button>
+    </nav>
+    <div class="sidebar-bottom"><span class="world-dot"></span><div><strong>Trimera</strong><small>Lista de atualização manual</small></div><span class="version-label">v1.2</span></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="breadcrumb"><button id="mobile-menu" class="icon-btn mobile-only" aria-label="Abrir menu" aria-controls="sidebar" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button><span class="tiny-shield">◇</span><span>Central da guild</span><span class="slash">/</span><span>Personagens</span></div><div class="topbar-right"><span class="manual-pill"><span></span>Atualização manual</span></div></header>
+    <main id="main-content">
+      <section class="page-heading"><div><div class="eyebrow">ALDEIA ONLINE · TRIMERA</div><h1>O mapa da sua guild.</h1><p>Quem é quem, organizado em um só lugar.</p></div><div class="heading-actions"><button id="refresh-btn" class="btn btn-secondary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 7v5h-5M4 17v-5h5M6 7a7 7 0 0 1 12-1l2 6M4 12l2 6a7 7 0 0 0 12-1"/></svg><span>Atualizar lista</span></button></div></section>
+      <p id="load-message" class="load-message" role="status">Carregando a lista oficial…</p>
+      <div id="load-error" class="load-error" role="alert" hidden><p id="load-error-text"></p><button id="retry-btn" class="btn btn-secondary btn-small">Tentar novamente</button></div>
+      <noscript><p class="load-error">Ative o JavaScript do navegador para consultar a lista de personagens.</p></noscript>
+      <div id="roster-content" hidden>
+      <section id="stats" class="stats-grid" aria-label="Resumo dos grupos"></section>
+      <div class="content-grid">
+        <section class="list-panel panel" aria-labelledby="list-heading">
+          <div class="list-header"><div><div class="section-eyebrow">PERSONAGENS CADASTRADOS</div><h2 id="list-heading">Todos os personagens</h2><p id="list-description">Sua organização, sempre à mão.</p></div></div>
+          <div class="filters"><label class="search-field"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="search" type="search" placeholder="Buscar personagem…" aria-label="Buscar personagem" autocomplete="off"><kbd>/</kbd></label><select id="vocation-filter" aria-label="Filtrar por vocação" aria-describedby="vocation-filter-hint"><option value="">Todas as vocações</option></select><select id="sort-select" aria-label="Ordenar personagens"><option value="name">Nome: A–Z</option><option value="level-desc">Maior level</option><option value="level-asc">Menor level</option><option value="vocation">Vocação</option></select></div>
+          <div class="filter-meta"><p id="vocation-filter-hint">Cada filtro inclui a vocação base e sua promoção.</p><button id="clear-filters" class="text-btn" hidden>Limpar filtros</button></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Lista de personagens; role para os lados em telas pequenas"><table><thead><tr><th scope="col">Personagem</th><th scope="col" class="level-column">Level</th><th scope="col">Vocação</th><th scope="col">Grupo</th><th scope="col" class="actions-column"><span class="sr-only">Ações</span></th></tr></thead><tbody id="table-body"></tbody></table></div>
+          <div id="empty-state" class="empty-state" hidden><span class="empty-symbol">⌕</span><h3>Nenhum personagem por aqui</h3><p>Experimente outra busca, limpe os filtros ou selecione outro grupo.</p></div>
+          <div class="table-footer"><span id="list-count" role="status" aria-live="polite" aria-atomic="true"></span><span><span class="subtle-dot"></span>Levels informados manualmente</span></div>
+        </section>
+        <aside class="right-rail" aria-label="Informações da guild">
+          <section class="panel team-panel"><div class="rail-heading"><span class="rail-icon team-tone"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 3v6c0 5-5 8-8 10-3-2-8-5-8-10V6l8-3Z"/><path d="m8 12 3 3 5-6"/></svg></span><h2>Nosso time</h2><span class="rail-eyebrow">ALIADOS</span></div><div id="team-summary"></div><button class="text-action" data-group="team">Ver integrantes <span aria-hidden="true">↗</span></button></section>
+          <section class="panel vocation-panel"><div class="rail-heading"><h2>Composição da lista</h2></div><p class="rail-caption">Personagens por vocação</p><div id="vocation-summary"></div></section>
+          <section class="note-panel"><span class="note-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5ZM3 12l9 5 9-5M3 16l9 5 9-5"/></svg></span><div><h3>Uma lista para todo o time.</h3><p>Consulte os personagens e use os filtros para organizar sua busca.</p></div></section>
+        </aside>
+      </div>
+      </div>
+      <footer class="page-footer"><span>ALDEIA INTEL <span class="footer-separator">/</span> Central da guild</span><span id="last-updated">—</span></footer>
+    </main>
+  </div>
+  <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+  <section id="drawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" tabindex="-1" hidden><header class="drawer-header"><div><div class="eyebrow">CENTRAL DA GUILD</div><h2 id="drawer-title"></h2><p id="drawer-subtitle"></p></div><button id="drawer-close" class="icon-btn" aria-label="Fechar painel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></header><div id="drawer-content" class="drawer-content"></div></section>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script>(() => {
+  'use strict';
+
+  const $ = (id) => document.getElementById(id);
+  const esc = (value) => String(value ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  const searchKey = (value) => String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase('pt-BR');
+  const GROUPS = {
+    main: { label: 'Hunted', description: 'Lista de inimigos • classificação manual', icon: 'swords' },
+    team: { label: 'Nosso time', description: 'Integrantes do time e aliados', icon: 'shield' }
+  };
+  const VOCATIONS = ['Knight', 'Elite Knight', 'Paladin', 'Royal Paladin', 'Druid', 'Elder Druid', 'Sorcerer', 'Master Sorcerer'];
+  const VOCATION_FILTERS = ['Royal Paladin', 'Elder Druid', 'Elite Knight', 'Master Sorcerer'];
+  const paths = {
+    swords: '<path d="m4 3 13 13M3 3l1 5 4-4-5-1ZM3 16l5 5m-3-2 4-4m11-12-1 5-4-4 5-1ZM17 16l4 5m-2-2-4-4M14 9l-4 4"/>',
+    shield: '<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/>',
+    bow: '<path d="M5 3c10 1 15 6 16 16L5 3ZM3 21 19 5m-6 0h6v6M3 16v5h5"/>',
+    leaf: '<path d="M19 3C9 3 3 8 5 15c7 2 12-4 14-12ZM4 21l10-12"/>',
+    wand: '<path d="m4 20 12-12m-2-5 1 3m5-1-2 2m4 4-3-1M5 5h4M7 3v4"/>',
+    user: '<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+    arrow: '<path d="m9 5 7 7-7 7"/>',
+    info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/>'
+  };
+  const icon = (name) => `<svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.user}</svg>`;
+  const family = (vocation) => vocation.includes('Paladin') ? 'Paladins' : vocation.includes('Druid') ? 'Druidas' : vocation.includes('Knight') ? 'Knights' : vocation.includes('Sorcerer') ? 'Sorcerers' : 'Não informada';
+  const vocationIcon = (vocation) => ({ Paladins: 'bow', Druidas: 'leaf', Knights: 'shield', Sorcerers: 'wand' }[family(vocation)] || 'user');
+  const matchesVocation = (vocation, selected) => !selected || (selected === 'unknown' ? !vocation : VOCATION_FILTERS.includes(selected) && family(vocation) === family(selected));
+
+  function validateData(input) {
+    if (!input || typeof input !== 'object' || !Array.isArray(input.players)) throw new Error('O arquivo da lista tem um formato inválido.');
+    if (input.players.length > 2000) throw new Error('A lista excede o limite de 2.000 personagens.');
+    const names = new Set();
+    const ids = new Set();
+    const players = input.players.map((row, index) => {
+      if (!row || typeof row !== 'object' || typeof row.name !== 'string' || /[\u0000-\u001f\u007f]/.test(row.name)) throw new Error(`Nome inválido na posição ${index + 1}.`);
+      const name = row.name.trim().replace(/\s+/g, ' ');
+      const nameKey = name.normalize('NFKC').toLocaleLowerCase('pt-BR');
+      if (!name || name.length > 60 || names.has(nameKey)) throw new Error(`Nome vazio, muito longo ou repetido na posição ${index + 1}.`);
+      names.add(nameKey);
+      if (typeof row.group !== 'string' || !Object.hasOwn(GROUPS, row.group)) throw new Error(`Grupo inválido para “${name}”.`);
+      const level = row.level === '' || row.level === undefined || row.level === null ? null : row.level;
+      if (level !== null && (typeof level !== 'number' || !Number.isInteger(level) || level < 1 || level > 10000)) throw new Error(`Level inválido para “${name}”.`);
+      const vocation = row.vocation ?? '';
+      if (typeof vocation !== 'string' || (vocation && !VOCATIONS.includes(vocation))) throw new Error(`Vocação inválida para “${name}”.`);
+      const id = row.id ?? `character-${index + 1}`;
+      if (typeof id !== 'string' || !/^[a-zA-Z0-9_-]{1,100}$/.test(id) || ids.has(id)) throw new Error(`Identificador inválido ou repetido para “${name}”.`);
+      ids.add(id);
+      const notes = row.notes ?? '';
+      if (typeof notes !== 'string' || notes.length > 2000) throw new Error(`Observações inválidas para “${name}”.`);
+      return { id, name, level, vocation, group: row.group, notes };
+    });
+    const updatedAt = input.updatedAt ?? null;
+    if (updatedAt !== null && (typeof updatedAt !== 'string' || Number.isNaN(Date.parse(updatedAt)))) throw new Error('A data de atualização da lista é inválida.');
+    return { players, updatedAt };
+  }
+
+  let data = null;
+  let activeGroup = 'main';
+  let loading = false;
+  let drawerIsOpen = false;
+  let previousFocus = null;
+
+  function formattedDate(value) {
+    if (!value) return 'Data da lista não informada';
+    const date = new Date(value.length === 10 ? `${value}T12:00:00Z` : value);
+    return 'Lista atualizada em ' + new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: 'short', year: 'numeric', timeZone: 'America/Sao_Paulo' }).format(date);
+  }
+
+  function visiblePlayers() {
+    if (!data) return [];
+    const query = searchKey($('search')?.value || '').trim();
+    const vocation = $('vocation-filter')?.value || '';
+    const sort = $('sort-select')?.value || 'name';
+    return data.players.filter((p) => (activeGroup === 'all' || p.group === activeGroup)
+      && matchesVocation(p.vocation, vocation)
+      && (!query || searchKey(`${p.name} ${p.notes} ${p.vocation}`).includes(query)))
+      .sort((a, b) => {
+        if (sort === 'level-desc') return (b.level ?? -1) - (a.level ?? -1) || a.name.localeCompare(b.name, 'pt-BR');
+        if (sort === 'level-asc') return (a.level ?? Infinity) - (b.level ?? Infinity) || a.name.localeCompare(b.name, 'pt-BR');
+        if (sort === 'vocation') return (a.vocation || 'zzz').localeCompare(b.vocation || 'zzz', 'pt-BR') || a.name.localeCompare(b.name, 'pt-BR');
+        return a.name.localeCompare(b.name, 'pt-BR');
+      });
+  }
+
+  function render() {
+    if (!data) return;
+    const counts = Object.fromEntries(Object.keys(GROUPS).map((group) => [group, data.players.filter((p) => p.group === group).length]));
+    if ($('stats')) $('stats').innerHTML = Object.entries(GROUPS).map(([key, group]) => `<button class="stat-card ${activeGroup === key ? 'active' : ''}" data-group="${key}" data-tone="${key}" aria-pressed="${activeGroup === key}"><span class="stat-icon">${icon(group.icon)}</span><span class="stat-text"><span class="stat-label" style="display:block">${group.label}</span><strong class="stat-value" style="display:block">${counts[key]}</strong></span></button>`).join('');
+    $('nav-list')?.querySelectorAll('[data-group]').forEach((button) => {
+      button.classList.toggle('active', button.dataset.group === activeGroup);
+      if (button.dataset.group === activeGroup) button.setAttribute('aria-current', 'page');
+      else button.removeAttribute('aria-current');
+      const count = button.querySelector('.nav-count');
+      if (count) count.textContent = button.dataset.group === 'all' ? data.players.length : counts[button.dataset.group] ?? '—';
+    });
+    const visible = visiblePlayers();
+    const groupTotal = activeGroup === 'all' ? data.players.length : counts[activeGroup];
+    if ($('list-heading')) $('list-heading').textContent = activeGroup === 'all' ? 'Todos os personagens' : GROUPS[activeGroup].label;
+    if ($('list-description')) $('list-description').textContent = activeGroup === 'all' ? 'Sua lista completa: Hunted e Nosso time' : GROUPS[activeGroup].description;
+    if ($('table-body')) $('table-body').innerHTML = visible.map((p) => `<tr data-player-id="${p.id}"><td><button class="row-name" data-action="details" data-id="${p.id}"><span class="row-icon" data-tone="${p.group}">${icon(vocationIcon(p.vocation))}</span><span>${esc(p.name)}</span></button></td><td class="level-cell">${p.level ?? '—'}</td><td class="vocation-cell">${esc(p.vocation || 'Não informada')}</td><td><span class="group-badge" data-tone="${p.group}">${GROUPS[p.group].label}</span></td><td class="row-actions"><button class="icon-btn" data-action="details" data-id="${p.id}" aria-label="Ver detalhes de ${esc(p.name)}" title="Ver detalhes">${icon('arrow')}</button></td></tr>`).join('');
+    if ($('empty-state')) $('empty-state').hidden = visible.length > 0;
+    if ($('list-count')) $('list-count').textContent = `${visible.length} de ${groupTotal} ${groupTotal === 1 ? 'personagem' : 'personagens'}`;
+    if ($('clear-filters')) $('clear-filters').hidden = !($('search')?.value || $('vocation-filter')?.value);
+    if ($('last-updated')) $('last-updated').textContent = formattedDate(data.updatedAt);
+    renderTeam();
+    renderVocations();
+  }
+
+  function renderTeam() {
+    if (!$('team-summary')) return;
+    const team = data.players.filter((p) => p.group === 'team').sort((a, b) => (b.level ?? -1) - (a.level ?? -1));
+    $('team-summary').innerHTML = team.slice(0, 3).map((p) => `<button class="team-card" data-action="details" data-id="${p.id}"><span class="team-avatar">${icon(vocationIcon(p.vocation))}</span><span class="team-meta"><strong>${esc(p.name)}</strong><small>${esc(p.vocation || 'Vocação não informada')}</small></span><span class="team-level"><strong>${p.level ?? '—'}</strong><small>LEVEL</small></span></button>`).join('')
+      + (!team.length ? '<p class="muted empty-copy">Nenhum integrante na lista publicada.</p>' : '')
+      + (team.length > 3 ? `<button class="text-btn" data-group="team">Ver os ${team.length} integrantes ${icon('arrow')}</button>` : '');
+  }
+
+  function renderVocations() {
+    if (!$('vocation-summary')) return;
+    const players = activeGroup === 'all' ? data.players : data.players.filter((p) => p.group === activeGroup);
+    $('vocation-summary').innerHTML = ['Paladins', 'Druidas', 'Knights', 'Sorcerers', 'Não informada']
+      .map((name) => ({ name, count: players.filter((p) => family(p.vocation) === name).length }))
+      .filter((item) => item.count > 0)
+      .map((item) => `<div class="vocation-row"><div class="vocation-label"><span>${item.name}</span><strong>${item.count}</strong></div><div class="vocation-bar"><span style="width:${Math.round(item.count / players.length * 100)}%"></span></div></div>`).join('') || '<p class="muted empty-copy">Nenhum personagem neste grupo.</p>';
+  }
+
+  function setCategory(group) {
+    if (group !== 'all' && !Object.hasOwn(GROUPS, group)) return;
+    activeGroup = group;
+    $('sidebar')?.classList.remove('is-open');
+    $('mobile-menu')?.setAttribute('aria-expanded', 'false');
+    render();
+  }
+
+  function showDetails(id) {
+    const player = data?.players.find((p) => p.id === id);
+    if (!player) return;
+    if (!drawerIsOpen) previousFocus = document.activeElement;
+    drawerIsOpen = true;
+    $('drawer-title').textContent = player.name;
+    $('drawer-subtitle').textContent = GROUPS[player.group].label;
+    $('drawer-content').innerHTML = `<div class="character-hero" data-tone="${player.group}"><span class="character-avatar">${icon(vocationIcon(player.vocation))}</span><div><span class="detail-label">LEVEL INFORMADO</span><strong class="character-level">${player.level ?? '—'}</strong></div></div><div class="detail-grid"><div><span class="detail-label">Vocação</span><strong class="detail-value">${esc(player.vocation || 'Não informada')}</strong></div><div><span class="detail-label">Grupo</span><span class="group-badge" data-tone="${player.group}">${GROUPS[player.group].label}</span></div></div><div class="field"><span class="detail-label">Observações</span><p class="detail-notes">${esc(player.notes || 'Nenhuma observação informada.')}</p></div><div class="notice">${icon('info')}<p>Informações publicadas pelo responsável pela lista. Este painel não consulta o Aldeia e não indica presença no jogo.</p></div><div class="drawer-footer"><button class="btn btn-secondary" data-action="close">Fechar</button></div>`;
+    $('drawer').hidden = false;
+    $('drawer-backdrop').hidden = false;
+    $('drawer').classList.add('is-open');
+    $('drawer-backdrop').classList.add('is-open');
+    $('drawer').setAttribute('aria-hidden', 'false');
+    document.body.classList.add('drawer-open');
+    requestAnimationFrame(() => $('drawer-close').focus());
+  }
+
+  function closeDrawer() {
+    if (!drawerIsOpen) return;
+    drawerIsOpen = false;
+    $('drawer').classList.remove('is-open');
+    $('drawer-backdrop').classList.remove('is-open');
+    $('drawer').hidden = true;
+    $('drawer-backdrop').hidden = true;
+    $('drawer').setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('drawer-open');
+    if (previousFocus?.isConnected && previousFocus.getClientRects().length) previousFocus.focus();
+    else $('refresh-btn')?.focus();
+  }
+
+  async function loadData() {
+    if (loading) return;
+    loading = true;
+    if ($('load-error')) $('load-error').hidden = true;
+    if ($('load-message')) $('load-message').textContent = data ? 'Atualizando a lista publicada…' : 'Carregando a lista publicada…';
+    if (!data && $('roster-content')) $('roster-content').hidden = true;
+    ['refresh-btn', 'retry-btn'].forEach((id) => {
+      if ($(id)) { $(id).disabled = true; $(id).setAttribute('aria-busy', 'true'); }
+    });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    try {
+      if (location.protocol === 'file:') throw new Error('Abra este painel por um endereço HTTP ou HTTPS. A leitura da lista não funciona ao abrir o arquivo diretamente do computador.');
+      const response = await fetch('./dados.json', { method: 'GET', cache: 'no-store', signal: controller.signal });
+      if (!response.ok) throw new Error(response.status === 404 ? 'A lista publicada não foi encontrada. Tente novamente ou avise o responsável pelo painel.' : `Não foi possível consultar a lista (HTTP ${response.status}). Tente novamente.`);
+      const text = await response.text();
+      if (text.length > 2 * 1024 * 1024) throw new Error('O arquivo da lista excede o tamanho permitido.');
+      let parsed;
+      try { parsed = JSON.parse(text); }
+      catch (_) { throw new Error('O arquivo publicado não contém uma lista JSON válida. Avise o responsável pelo painel.'); }
+      const next = validateData(parsed);
+      closeDrawer();
+      data = next;
+      render();
+      if ($('roster-content')) $('roster-content').hidden = false;
+      if ($('load-message')) $('load-message').textContent = `Lista carregada. ${data.players.length} ${data.players.length === 1 ? 'personagem disponível' : 'personagens disponíveis'}.`;
+    } catch (error) {
+      if ($('load-error')) $('load-error').hidden = false;
+      if ($('load-error-text')) $('load-error-text').textContent = error.name === 'AbortError' ? 'A consulta demorou mais de 15 segundos. Verifique sua conexão e tente novamente.' : error.message || 'Não foi possível carregar a lista. Tente novamente.';
+      if ($('load-message')) $('load-message').textContent = data ? 'A atualização falhou. A última lista carregada continua visível.' : 'Não foi possível carregar os personagens.';
+    } finally {
+      clearTimeout(timeout);
+      loading = false;
+      ['refresh-btn', 'retry-btn'].forEach((id) => {
+        if ($(id)) { $(id).disabled = false; $(id).removeAttribute('aria-busy'); }
+      });
+    }
+  }
+
+  document.addEventListener('click', (event) => {
+    const actionButton = event.target.closest('[data-action]');
+    if (actionButton?.dataset.action === 'details') showDetails(actionButton.dataset.id);
+    if (actionButton?.dataset.action === 'close') closeDrawer();
+    const categoryButton = event.target.closest('button[data-group]');
+    if (categoryButton) setCategory(categoryButton.dataset.group);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === '/' && !drawerIsOpen && !event.target.closest('input, textarea, select, [contenteditable="true"]')) { event.preventDefault(); $('search')?.focus(); }
+    if (event.key === 'Escape') {
+      if (drawerIsOpen) closeDrawer();
+      else { $('sidebar')?.classList.remove('is-open'); $('mobile-menu')?.setAttribute('aria-expanded', 'false'); }
+    }
+    if (drawerIsOpen && event.key === 'Tab') {
+      const focusable = [...$('drawer').querySelectorAll('button:not([disabled]), [href], [tabindex="0"]')].filter((node) => node.getClientRects().length > 0);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    }
+  });
+  const listen = (id, event, callback) => $(id)?.addEventListener(event, callback);
+  listen('search', 'input', render);
+  listen('vocation-filter', 'change', render);
+  listen('sort-select', 'change', render);
+  listen('clear-filters', 'click', () => { if ($('search')) $('search').value = ''; if ($('vocation-filter')) $('vocation-filter').value = ''; render(); $('search')?.focus(); });
+  listen('refresh-btn', 'click', loadData);
+  listen('retry-btn', 'click', loadData);
+  listen('drawer-close', 'click', closeDrawer);
+  listen('drawer-backdrop', 'click', closeDrawer);
+  listen('mobile-menu', 'click', () => { const open = $('sidebar')?.classList.toggle('is-open'); $('mobile-menu')?.setAttribute('aria-expanded', String(!!open)); });
+  if ($('vocation-filter')) $('vocation-filter').innerHTML = '<option value="">Todas as vocações</option>' + VOCATION_FILTERS.map((v) => `<option>${v}</option>`).join('') + '<option value="unknown">Não informada</option>';
+  $('nav-list')?.querySelectorAll('.nav-count').forEach((count) => { count.textContent = '—'; });
+  if ($('last-updated')) $('last-updated').textContent = 'Aguardando leitura da lista';
+  loadData();
+})();
+</script>
+</body>
+</html>

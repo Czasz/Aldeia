@@ -1,0 +1,175 @@
+{
+  "version": "aldeia-lista-20261029-v2",
+  "updatedAt": "2026-10-29T04:40:04.920Z",
+  "guildName": "Aldeia Intel",
+  "players": [
+    {
+      "id": "hunted-archelaus",
+      "name": "Archelaus",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "hunted-biig",
+      "name": "Biig",
+      "level": null,
+      "vocation": "Master Sorcerer",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "enemy-8",
+      "name": "Bone Fletcher",
+      "level": 29,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "enemy-2",
+      "name": "Doug",
+      "level": 50,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "enemy-3",
+      "name": "Edoc",
+      "level": 30,
+      "vocation": "Elder Druid",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "hunted-napoleon",
+      "name": "Napoleon",
+      "level": null,
+      "vocation": "Master Sorcerer",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "hunted-rzgy",
+      "name": "Rzgy",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "hunted-saladino",
+      "name": "Saladino",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "hunted-afavor-doscorres",
+      "name": "Afavor Doscorres",
+      "level": null,
+      "vocation": "Master Sorcerer",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "enemy-9",
+      "name": "Danadinha",
+      "level": 28,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "main-help-package",
+      "name": "Help Package",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "enemy-5",
+      "name": "Ilbritadeira",
+      "level": 22,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "main-khardix",
+      "name": "Khardix",
+      "level": 32,
+      "vocation": "",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "main-manito-xilote",
+      "name": "Manito Xilote",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "enemy-10",
+      "name": "Pedraosito War",
+      "level": 40,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "enemy-1",
+      "name": "Reflexo",
+      "level": 46,
+      "vocation": "Royal Paladin",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "enemy-6",
+      "name": "Ronald Mcdonaldd",
+      "level": 35,
+      "vocation": "Elite Knight",
+      "group": "main",
+      "notes": "Guild Meia Duzia. Dados informados pela imagem; grupo Hunted."
+    },
+    {
+      "id": "main-sty-ling",
+      "name": "Sty Ling",
+      "level": null,
+      "vocation": "Elder Druid",
+      "group": "main",
+      "notes": ""
+    },
+    {
+      "id": "team-1",
+      "name": "Zyeszkk",
+      "level": 38,
+      "vocation": "Royal Paladin",
+      "group": "team",
+      "notes": "Dados informados por Willyam."
+    },
+    {
+      "id": "team-garotao",
+      "name": "Garotao",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "team",
+      "notes": ""
+    },
+    {
+      "id": "team-noob-killer",
+      "name": "Noob Killer",
+      "level": null,
+      "vocation": "Royal Paladin",
+      "group": "team",
+      "notes": ""
+    }
+  ]
+}
