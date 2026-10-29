@@ -150,7 +150,7 @@
     {
       "id": "team-1",
       "name": "Zyeszkk",
-      "level": 38,
+      "level": 39,
       "vocation": "Royal Paladin",
       "group": "team",
       "notes": "Dados informados por Willyam."
@@ -159,14 +159,6 @@
       "id": "team-garotao",
       "name": "Garotao",
       "level": 32,
-      "vocation": "Royal Paladin",
-      "group": "team",
-      "notes": ""
-    },
-    {
-      "id": "team-noob-killer",
-      "name": "Noob Killer",
-      "level": 22,
       "vocation": "Royal Paladin",
       "group": "team",
       "notes": ""
